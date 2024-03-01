@@ -90,9 +90,12 @@ const { title } = Astro.props;
   html {
     font-family: "Roboto Mono Variable", monospace;
     color-scheme: dark light;
+    scroll-behavior: smooth;
   }
 
-  body {
-    scroll-behavior: smooth;
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 </style>
